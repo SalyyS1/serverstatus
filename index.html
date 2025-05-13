@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Two Minecraft Status</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="video-background">
+        <video id="bgVideo" autoplay loop muted playsinline>
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="music-control">
+        <button id="musicToggle" class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+        <audio id="bgMusic" loop>
+            <source src="assets/music/sample.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <div class="container">
+        <h1>Zero Two Minecraft Status</h1>
+        <div class="zt-tabs">
+            <button class="zt-tab active" data-tab="single">Kiểm tra 1 server</button>
+            <button class="zt-tab" data-tab="compare">So sánh 2 server</button>
+            <button class="zt-tab" data-tab="multi">Multi-Ping</button>
+            <button class="zt-tab" data-tab="favs">Yêu thích</button>
+        </div>
+        <div id="zt-single" class="zt-tab-content">
+            <div class="search-box">
+                <div class="zero-two-gif">
+                    <img src="assets\images\zero-two\example.gif" alt="Zero Two">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="serverIp" placeholder="Nhập IP server (vd: play.hypixel.net)" />
+                    <button id="checkButton">
+                        <i class="fas fa-search"></i> Kiểm tra
+                    </button>
+                </div>
+            </div>
+            <div class="server-info" id="serverInfo">
+                <div class="status-card">
+                    <div class="card-background"></div>
+                    <div class="server-header">
+                        <img id="serverIcon" src="assets\images\zero-two\example.gif" alt="Server Icon" class="server-icon">
+                        <div>
+                            <h2 id="serverName">Server Status</h2>
+                            <span id="status" class="status-badge">-</span>
+                        </div>
+                    </div>
+                    <div class="status-grid compact">
+                        <div class="status-item">
+                            <span class="label">MOTD</span>
+                            <span id="motd" class="value motd-html">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Người chơi</span>
+                            <span id="players" class="value">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Phiên bản</span>
+                            <span id="version" class="value">-</span>
+                        </div>
+                        <div class="status-item">
+                            <span class="label">Ping</span>
+                            <span id="ping" class="value">-</span>
+                        </div>
+                    </div>
+                    <div class="player-list" id="playerList">
+                        <div id="playersList" class="players-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="zt-compare" class="zt-tab-content" style="display:none">
+            <div class="compare-box">
+                <input type="text" id="compareIp1" placeholder="Server IP 1 (e.g., heromc.net)" />
+                <span class="vs-label">VS</span>
+                <input type="text" id="compareIp2" placeholder="Server IP 2 (e.g., mineahihi.com)" />
+                <button id="compareButton"><i class="fas fa-balance-scale"></i> So sánh</button>
+            </div>
+            <div id="compareResult"></div>
+        </div>
+        <div id="zt-multi" class="zt-tab-content" style="display:none">
+            <div class="multi-ping-controls">
+                <textarea id="multiPingInput" rows="3" placeholder="Nhập nhiều IP, cách nhau bởi dấu phẩy hoặc xuống dòng..."></textarea>
+                <div class="multi-ping-buttons">
+                    <button id="multiPingCheck"><i class="fas fa-sync"></i> Làm mới tất cả</button>
+                    <button id="multiPingFilter"><i class="fas fa-filter"></i> Lọc Online</button>
+                    <button id="multiPingSort"><i class="fas fa-sort-amount-down"></i> Sắp xếp theo người chơi</button>
+                </div>
+            </div>
+            <div id="multiPingResult" class="multi-ping-grid"></div>
+        </div>
+        <div id="zt-favs" class="zt-tab-content" style="display:none">
+            <div class="favorites-section">
+                <h2>Favorite Servers</h2>
+                <div id="favoritesList" class="favorites-grid"></div>
+                <div id="defaultFavorites" class="favorites-grid"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
