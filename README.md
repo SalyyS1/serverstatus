@@ -1,25 +1,12 @@
-# Zero Two Minecraft Server Status
 
-A beautiful Minecraft server status checker with Zero Two theme, featuring real-time server status monitoring and player statistics visualization.
-
-## 🌟 Features
-
-- Real-time Minecraft server status checking
-- Player statistics graph with historical data
-- Zero Two themed UI with animations
-- Background music with toggle
-- Responsive design for all devices
-- No backend required - runs entirely in the browser
 
 ## 📁 Project Structure
 
 ```
 serverstatus/
 ├── index.html          # Main status checker page
-├── player-graph.html   # Player statistics page
 ├── style.css          # Main stylesheet
 ├── script.js          # Main page JavaScript
-├── graph.js           # Graph page JavaScript
 ├── assets/            # Static assets directory
 │   ├── images/        # Image files
 │   │   ├── zero-two/  # Zero Two themed images
@@ -29,41 +16,6 @@ serverstatus/
 └── README.md          # This file
 ```
 
-## 🎨 Adding Custom Assets
-
-### Server Icons
-- Place your custom server icons (PNG, 32x32 or 64x64 recommended) in `assets/images/icons/`.
-- To use a custom icon for a server, name the file as `<server-ip>.png` (e.g., `heromc.net.png`).
-- The app will automatically use the icon if it exists, otherwise it will fetch from the API or use a fallback.
-
-### Zero Two Images
-- Place Zero Two themed images or GIFs in `assets/images/zero-two/`.
-- You can use these images for backgrounds, avatars, or decorative elements in the UI.
-- Example usage: `<img src="assets/images/zero-two/your-image.png">`
-
-### UI Icons
-- Place UI-related icons (PNG, SVG, etc.) in `assets/images/icons/`.
-- Reference them in your HTML or JS as needed.
-
-### Music & Video
-- Place music files in `assets/music/` and video files in `assets/videos/`.
-- Update the source in your HTML/JS to use your custom files.
-
-## 📁 Example Folder Structure
-```
-assets/
-  images/
-    zero-two/
-      sample.png
-    icons/
-      heromc.net.png
-      mineahihi.com.png
-      sample.png
-  music/
-    your-music.mp3
-  videos/
-    your-video.mp4
-```
 
 ## 🚀 Setup
 
@@ -77,29 +29,12 @@ git clone https://github.com/yourusername/serverstatus.git
 3. Update the following files with your assets:
    - `index.html`: Update video background and music sources
    - `script.js`: Update music source
-   - `graph.js`: Update music source
+
 
 4. Deploy to GitHub Pages:
    - Go to repository settings
    - Enable GitHub Pages
    - Select main branch as source
-
-## 🛠️ Technologies Used
-
-- HTML5
-- CSS3
-- JavaScript (ES6+)
-- Chart.js for graphs
-- Howler.js for audio
-- Anime.js for animations
-- Font Awesome for icons
-
-## 📱 Responsive Design
-
-The website is fully responsive and works on:
-- Desktop computers
-- Tablets
-- Mobile phones
 
 ## 🎵 Background Music
 
@@ -160,6 +95,4 @@ options: {
 4. Push to the branch
 5. Create a Pull Request
 
-## 📝 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
